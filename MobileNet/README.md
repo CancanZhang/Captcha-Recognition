@@ -6,7 +6,7 @@ Environment: Python 2.7.6 Tensorflow 1.4.1 Keras 2.1.5 Tesla K80*1
 
 - Light weight deep neural networks
 
-- Factorize a standard convolution into a depthwise convolution and a 1X1 convolution ![mobilenet](C:\Users\33333\Desktop\MobileNet\img\mobilenet.png)
+- Factorize a standard convolution into a depthwise convolution and a 1X1 convolution ![mobilenet](https://github.com/CancanZhang/Captcha-Recognition/tree/master/MobileNet/img/mobilenet.png)
 
 - Input Size: $D_F * D_F * M$
 
@@ -30,11 +30,11 @@ Environment: Python 2.7.6 Tensorflow 1.4.1 Keras 2.1.5 Tesla K80*1
 
 - Generate captcha, with 4 characters, using package captcha
 
-  ![2](C:\Users\33333\Desktop\MobileNet\img\2.png)![1](C:\Users\33333\Desktop\MobileNet\img\1.png)
+  ![2](https://github.com/CancanZhang/Captcha-Recognition/tree/master/MobileNet/img/2.png)![1](https://github.com/CancanZhang/Captcha-Recognition/tree/master/MobileNet/img/1.png)
 
-- Val Accuracy: 96.88%![hist](C:\Users\33333\Desktop\MobileNet\img\hist.png)
+- Val Accuracy: 96.88%![hist](https://github.com/CancanZhang/Captcha-Recognition/tree/master/MobileNet/img/hist.png)
 
-- Prediction![predict](C:\Users\33333\Desktop\MobileNet\img\predict.png)
+- Prediction![predict](https://github.com/CancanZhang/Captcha-Recognition/tree/master/MobileNet/img/predict.png)
 
 - If you have any problem, please feel free to contact me.
 
