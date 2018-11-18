@@ -1,8 +1,10 @@
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
+
 # Captcha Recognition with MobileNet	 
 
 Environment: Python 2.7.6 Tensorflow 1.4.1 Keras 2.1.5 Tesla K80*1
 
-**MobileNet**
+### MobileNet
 
 - Light weight deep neural networks
 
