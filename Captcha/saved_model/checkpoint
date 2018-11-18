@@ -1,6 +1,0 @@
-model_checkpoint_path: "captha.try-1050"
-all_model_checkpoint_paths: "captha.try-850"
-all_model_checkpoint_paths: "captha.try-900"
-all_model_checkpoint_paths: "captha.try-950"
-all_model_checkpoint_paths: "captha.try-1000"
-all_model_checkpoint_paths: "captha.try-1050"
