@@ -38,12 +38,12 @@ Environment: Python 2.7.6 Tensorflow 1.4.1 Keras 2.1.5 Tesla K80*1
 
 - Prediction![predict](https://github.com/CancanZhang/Captcha-Recognition/blob/master/MobileNet/img/predict.png)
 
-- However, when we try to predict captcha from a different source, the prediction result does not make any sense.
+- We also use another method to generate capthas, using different font, font size, font color, rotation, distance from each characters and background colors. Plus, we also add salt pepper noise or Gaussian noise on the images.
 
   ![mock1](https://github.com/CancanZhang/Captcha-Recognition/blob/master/MobileNet/img/mock1.png)
   ![mock2](https://github.com/CancanZhang/Captcha-Recognition/blob/master/MobileNet/img/mock2.png)
   ![mock3](https://github.com/CancanZhang/Captcha-Recognition/blob/master/MobileNet/img/mock3.png)
   ![mock4](https://github.com/CancanZhang/Captcha-Recognition/blob/master/MobileNet/img/mock4.png)
   
-- Prediction![predict_mock](https://github.com/CancanZhang/Captcha-Recognition/blob/master/MobileNet/img/predict_mock.png)
+- However, our model cannot do well on this dataset. Prediction result: ![predict_mock](https://github.com/CancanZhang/Captcha-Recognition/blob/master/MobileNet/img/predict_mock.png)
 
