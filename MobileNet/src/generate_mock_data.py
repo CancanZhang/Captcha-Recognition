@@ -155,7 +155,7 @@ class Generate_Mock_Data():
         # choose random font
         char = ''
         total_dis = 0
-        root_address = r'font/'
+        root_address = address_font
         num_fonts = len(os.listdir(root_address))                         
         while True:
             random_font = np.random.randint(num_fonts)
