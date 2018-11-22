@@ -5,12 +5,14 @@ from keras.applications import MobileNet
 from config import *
 from utils import *
 from generate_data import *
+from generate_mock_data import *
 from evaluate import *
 from mycbk import *
 import os
 
+
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
-os.environ["CUDA_VISIBLE_DEVICES"] = "11"
+os.environ["CUDA_VISIBLE_DEVICES"] = "12"
 
 def draw_predict(img,y_pred):
     plt.rcParams['figure.figsize'] = [16, 10]
@@ -33,7 +35,11 @@ input_shape = (IMAGE_HEIGHT,IMAGE_WIDTH,CHANNEL)
 model = MobileNet(input_shape=input_shape,alpha=1.,weights=None,classes=char_num*char_len)
 model.load_weights(address_model)
 
-[img,x,y] = Generate_Data().test()
+#[img,x,y] = Generate_Data().test()
+[img,x,y] = Generate_Mock_Data(min_char_len=4,max_char_len=8,char_num=char_num).get_next_batch()
+
 y_pred = model.predict(x)
 
 draw_predict(img,y_pred)
+
+print ('Accuracy',cal_accuracy(y,y_pred))
