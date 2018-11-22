@@ -48,4 +48,4 @@ Environment: Python 2.7.6 Tensorflow 1.4.1 Keras 2.1.5 Tesla K80*1
   ![mock3](https://github.com/CancanZhang/Captcha-Recognition/blob/master/MobileNet_with_Variable_Char_Length/img/mock3.png)
   ![mock4](https://github.com/CancanZhang/Captcha-Recognition/blob/master/MobileNet_with_Variable_Char_Length/img/mock4.png)
   
-- However, our model cannot do well on this dataset (0% accuracy). Prediction result: ![predict_mock](https://github.com/CancanZhang/Captcha-Recognition/blob/master/MobileNet_with_Variable_Char_Length/img/predict_mock.png)
+- Similarly, our model still cannot do well on this dataset (0% accuracy). Prediction result: ![predict_mock](https://github.com/CancanZhang/Captcha-Recognition/blob/master/MobileNet_with_Variable_Char_Length/img/predict_mock.png)
