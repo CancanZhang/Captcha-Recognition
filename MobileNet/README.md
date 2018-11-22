@@ -36,7 +36,7 @@ Environment: Python 2.7.6 Tensorflow 1.4.1 Keras 2.1.5 Tesla K80*1
 
 - Val Accuracy: 96.88%![hist](https://github.com/CancanZhang/Captcha-Recognition/blob/master/MobileNet/img/hist.png)
 
-- Prediction![predict](https://github.com/CancanZhang/Captcha-Recognition/blob/master/MobileNet/img/predict.png)
+- Prediction: 0.0\%![predict](https://github.com/CancanZhang/Captcha-Recognition/blob/master/MobileNet/img/predict.png)
 
 - We also use another method to generate capthas, using different font, font size, font color, rotation, distance from each characters and background colors. Plus, we also add salt pepper noise or Gaussian noise on the images.
 
