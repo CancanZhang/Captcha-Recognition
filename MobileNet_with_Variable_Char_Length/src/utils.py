@@ -137,3 +137,19 @@ def accuracy(y_true, y_pred):
     
     accuracy = correct_pred / K.cast(tf.shape(y_true)[0],tf.float32)
     return accuracy
+
+def cal_accuracy(y_true, y_pred):
+    [char_len,char_num] = get_char_length_and_number() 
+    y_true = np.reshape(y_true,[-1,char_len,char_num])
+    y_pred = np.reshape(y_pred,[-1,char_len,char_num])
+
+    class_true = np.argmax(y_true,axis=2)
+    class_pred = np.argmax(y_pred,axis=2)
+    
+    correct_pred = np.equal(class_true,class_pred)
+    correct_pred = np.sum(correct_pred,axis=1) # for each position
+    correct_pred = np.equal(correct_pred,char_len)
+    correct_pred = np.sum(correct_pred)
+    
+    accuracy = correct_pred / np.float(y_true.shape[0])
+    return accuracy
