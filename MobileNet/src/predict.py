@@ -34,6 +34,8 @@ model = MobileNet(input_shape=input_shape,alpha=1.,weights=None,classes=CHAR_NUM
 model.load_weights(address_model)
 
 [img,x,y] = Generate_Data().test()
+#[img,x,y] = Generate_Mock_Data().get_next_batch(256)
 y_pred = model.predict(x)
 
 draw_predict(img,y_pred)
+print ('Accuracy: ',cal_accuracy(y,y_pred))
