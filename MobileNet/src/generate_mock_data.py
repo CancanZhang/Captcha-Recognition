@@ -8,8 +8,8 @@ from PIL import Image, ImageFont, ImageDraw, ImageFilter
 import math
 import time 
 import keras
-from src.config import *
-from src.utils import *
+from config import *
+from utils import *
 
 
 
