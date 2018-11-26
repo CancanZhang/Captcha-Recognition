@@ -18,3 +18,5 @@ Environment: Python 2.7.6 Tensorflow 1.4.1 Keras 2.1.5 Tesla K80*1
 
 - Adding a class to denote '' character.
 
+- However, it does not show a good performance. Val Accuracy: 0%![hist](https://github.com/CancanZhang/Captcha-Recognition/blob/master/CNN_GRU_Attention/img/hist.png)
+
