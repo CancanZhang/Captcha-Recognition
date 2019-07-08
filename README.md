@@ -11,4 +11,4 @@
   ![3](https://github.com/CancanZhang/Captcha-Recognition/blob/master/MobileNet_with_Variable_Char_Length/img/3.png)
   ![4](https://github.com/CancanZhang/Captcha-Recognition/blob/master/MobileNet_with_Variable_Char_Length/img/4.png)
 
-- We have tried different models such as LeNet, MobileNet, CNN+LSTM+CTC Loss and CNN+LSTM+Attention. MobileNet is the most efficient one.
+- We have tried different models such as LeNet, MobileNet and CNN+LSTM+Attention. MobileNet is the most efficient one.
