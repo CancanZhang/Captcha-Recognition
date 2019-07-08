@@ -4,9 +4,6 @@ Environment: Python 2.7.6 Tensorflow 1.4.1 Keras 2.1.5 Tesla K80*1
 
 ### CNN+GRU+Attention
 
- ![model](https://github.com/CancanZhang/Captcha-Recognition/blob/master/CNN_GRU_Attention/img/model.png)
-
-
 **Note:**
 
 - Generate captcha, with 4-8 characters, using package captcha
