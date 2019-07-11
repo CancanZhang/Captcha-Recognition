@@ -37,9 +37,9 @@ Environment: Python 2.7.6 Tensorflow 1.4.1 Keras 2.1.5 Tesla K80*1
 
 - Adding a class to denote '' character.
 
-- Val Accuracy: 92.19%![hist](https://github.com/CancanZhang/Captcha-Recognition/blob/master/MobileNet_with_Variable_Char_Length/img/hist.png)
+- Val Accuracy: 92.19%![hist](https://github.com/CancanZhang/Captcha-Recognition/blob/master/MobileNet_with_Variable_Char_Length/img/hist_mobilenet.png)
 
-- Prediction![predict](https://github.com/CancanZhang/Captcha-Recognition/blob/master/MobileNet_with_Variable_Char_Length/img/predict.png)
+- Prediction![predict](https://github.com/CancanZhang/Captcha-Recognition/blob/master/MobileNet_with_Variable_Char_Length/img/predict_mobilenet.png)
 
 - We also use another method to generate capthas, using different font, font size, font color, rotation, distance from each characters and background colors. Plus, we also add salt pepper noise or Gaussian noise on the images.
 
