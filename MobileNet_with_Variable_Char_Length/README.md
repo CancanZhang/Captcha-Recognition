@@ -1,6 +1,6 @@
-# Captcha Recognition (Variable Character Length) with MobileNet	 
+# Captcha Recognition with MobileNet	 
 
-Environment: Python 2.7.6 Tensorflow 1.4.1 Keras 2.1.5 Tesla K80*1
+Environment: Python 2.7.6 Tensorflow 1.4.1 Keras 2.1.5 Tesla K80*2
 
 ### MobileNet
 
