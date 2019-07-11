@@ -28,16 +28,13 @@ Environment: Python 2.7.6 Tensorflow 1.4.1 Keras 2.1.5 Tesla K80*1
 
 **Note:**
 
-- Generate captcha, with 4-8 characters, using package captcha
+- Generate captcha, with 4-6 characters, using package captcha
 
-  ![2](https://github.com/CancanZhang/Captcha-Recognition/blob/master/MobileNet_with_Variable_Char_Length/img/2.png)
-  ![1](https://github.com/CancanZhang/Captcha-Recognition/blob/master/MobileNet_with_Variable_Char_Length/img/1.png)
-  ![3](https://github.com/CancanZhang/Captcha-Recognition/blob/master/MobileNet_with_Variable_Char_Length/img/3.png)
-  ![4](https://github.com/CancanZhang/Captcha-Recognition/blob/master/MobileNet_with_Variable_Char_Length/img/4.png)
+   ![1](https://github.com/CancanZhang/Captcha-Recognition/blob/master/CNN_GRU_Attention/img/captcha.png)
 
 - Adding a class to denote '' character.
 
-- Val Accuracy: 92.19%![hist](https://github.com/CancanZhang/Captcha-Recognition/blob/master/MobileNet_with_Variable_Char_Length/img/hist_mobilenet.png)
+- Categorical accuracy: 99.22%, accuracy: 95.31%![hist](https://github.com/CancanZhang/Captcha-Recognition/blob/master/MobileNet_with_Variable_Char_Length/img/hist_mobilenet.png)
 
 - Prediction![predict](https://github.com/CancanZhang/Captcha-Recognition/blob/master/MobileNet_with_Variable_Char_Length/img/predict_mobilenet.png)
 
