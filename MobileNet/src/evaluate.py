@@ -7,7 +7,6 @@ class Evaluate(keras.callbacks.Callback):
     def __init__(self,val):
         self.x = val[1]
         self.y = val[2]
-        self.char_len = get_char_length()
         self.random_index = np.random.randint(self.y.shape[0])
         
     def on_epoch_end(self,epoch,logs={}):

@@ -16,7 +16,7 @@ from utils import *
 class Generate_Mock_Data():
 
 
-    def __init__(self,img_w_min=160,img_w_max=160,img_h=60,channel=1,char_num=62,min_char_len=4,max_char_len=4,train_size=512,val_size=128):
+    def __init__(self,img_w_min=160,img_w_max=160,img_h=60,channel=1,char_num=62,min_char_len=4,max_char_len=8,train_size=512,val_size=128):
         
         self.img_w_min = img_w_min
         self.img_w_max = img_w_max
@@ -132,7 +132,7 @@ class Generate_Mock_Data():
         
         # random char num
         if self.min_char_len < self.max_char_len:
-            char_len = random.randint(self.min_char_len,self.max_char_len+1)
+            char_len = random.randint(self.min_char_len,self.max_char_len)
         else:
             char_len = self.max_char_len
             
@@ -166,7 +166,7 @@ class Generate_Mock_Data():
             else:
                 continue    
                 
-        # draw each character in the image one by one                            
+        # draw each character in the image one by one
         for i in range(char_len):
 
             # generate random character
@@ -177,12 +177,12 @@ class Generate_Mock_Data():
             
             # generate random fontsize, color, rotate angle, distance from the last character
             standard_fontsize = 45
-            fontsize = np.random.randint(-5,5) + 45 - char_len
+            fontsize = int(60 - char_len**1.5)
             font = ImageFont.truetype(random_font, fontsize)
             
             fontcolor = (np.random.randint(5,250),np.random.randint(5,250),np.random.randint(5,250))
             rand_rotate = np.random.randint(-15,15)
-            distance = np.random.randint(-fontsize*0.6,0) # contral overlapping 
+            distance = char_len - self.max_char_len #np.random.randint(-2,0) # contral overlapping 
 
             txt=Image.new('RGBA',[img_w,self.img_h],(0,0,0,1))
             d = ImageDraw.Draw(txt)
@@ -190,9 +190,9 @@ class Generate_Mock_Data():
             w=txt.rotate(rand_rotate, expand=1)#.convert('RGBA')
             mask = Image.fromarray(np.uint8(255*(np.array(w) > 50))).convert('RGBA')
             
-            verticle_dis = 5 - Generate_Mock_Data.veticle_move(rand_rotate,img_w)
+            verticle_dis = 2 - Generate_Mock_Data.veticle_move(rand_rotate,img_w)
             image.paste(w,(total_dis,verticle_dis),mask)  
-            total_dis += (fontsize + distance)
+            total_dis += (int(img_w/char_len-1)+ distance)
             
         # add noisy
         random_noise = np.random.rand()
@@ -206,4 +206,3 @@ class Generate_Mock_Data():
             
         image = Image.fromarray(image.astype(np.uint8))
         return char.lower(),image
-            

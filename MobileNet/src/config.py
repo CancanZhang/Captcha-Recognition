@@ -3,10 +3,10 @@ alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q',
 ALPHABET = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
 CHAR_NUM = len(number) + len(alphabet) + len(ALPHABET)
 
-FLAG_CHAR = 0 # 0:fixed length; 1:variable lenght
+FLAG_CHAR = 1 # 0:fixed length; 1:variable lenght
 CHAR_LEN = 4
 MIN_CHAR_LEN = 4
-MAX_CHAR_LEN = 6
+MAX_CHAR_LEN = 8
 
 IMAGE_HEIGHT = 60
 IMAGE_WIDTH = 160
@@ -25,4 +25,3 @@ address_tensorboard = '../show/'
 address_model = '../best_model.hdf5'
 address_hist = '../img/hist.png'
 address_predict = '../img/predict.png'
-address_font = '../font/'

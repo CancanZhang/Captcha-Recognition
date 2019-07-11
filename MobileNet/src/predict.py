@@ -5,9 +5,11 @@ from keras.applications import MobileNet
 from config import *
 from utils import *
 from generate_data import *
+from generate_mock_data import *
 from evaluate import *
 from mycbk import *
 import os
+
 
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
 os.environ["CUDA_VISIBLE_DEVICES"] = "12"
@@ -21,21 +23,23 @@ def draw_predict(img,y_pred):
     for i in range(n**2):
         ax = axs[i // n, i % n]
         ax.imshow(img[i].astype(np.uint8))
-        ax.text(130,6,pred2text(y_pred[i]),fontsize=15,color = 'blue',
+        ax.text(135,6,pred2text(y_pred[i]),fontsize=15,color = 'blue',
                 bbox=dict(boxstyle="square",facecolor='wheat'))
         ax.axis('off')
     plt.tight_layout()
     fig.savefig(address_predict, dpi=300)
     plt.show()
     
-length = get_char_length()
+[char_len,char_num] = get_char_length_and_number()  
 input_shape = (IMAGE_HEIGHT,IMAGE_WIDTH,CHANNEL)
-model = MobileNet(input_shape=input_shape,alpha=1.,weights=None,classes=CHAR_NUM*length)
+model = MobileNet(input_shape=input_shape,alpha=1.,weights=None,classes=char_num*char_len)
 model.load_weights(address_model)
 
-[img,x,y] = Generate_Data().test()
-#[img,x,y] = Generate_Mock_Data().get_next_batch(256)
+#[img,x,y] = Generate_Data().test()
+[img,x,y] = Generate_Mock_Data(min_char_len=4,max_char_len=8,char_num=char_num).get_next_batch()
+
 y_pred = model.predict(x)
 
 draw_predict(img,y_pred)
-print ('Accuracy: ',cal_accuracy(y,y_pred))
+
+print ('Accuracy',cal_accuracy(y,y_pred))

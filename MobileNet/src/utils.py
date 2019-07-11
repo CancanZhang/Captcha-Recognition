@@ -8,15 +8,17 @@ import numpy as np
 
 from config import *
 
-def get_char_length():
+def get_char_length_and_number():
     if FLAG_CHAR == 0:
         char_len = CHAR_LEN
+        char_num = CHAR_NUM
     elif FLAG_CHAR == 1:
         char_len = MAX_CHAR_LEN
+        char_num = CHAR_NUM + 1
     else:
         raise ValueError(u'FLAG_CHAR should be 0 or 1')
         char_len = -1
-    return char_len
+    return char_len,char_num
     
 def make_rand_char():
     return random.choice(string.ascii_letters+'0123456789')
@@ -79,33 +81,35 @@ def index2text(vec):
 
 def text2vec(text):
     text_len = len(text)
-    length = get_char_length()
+    char_len,char_num = get_char_length_and_number()
     
-    if text_len != length:
+    if text_len > char_len:
         raise ValueError(u'Text length does not fit')
 
-    vector = np.zeros(length * CHAR_NUM)
-    for i in range(length):
+    vector = np.zeros(char_len * char_num)
+    for i in range(char_len):
         if i < text_len:
-            idx = i * CHAR_NUM + char2pos(text[i])
+            idx = i * char_num + char2pos(text[i])
         else:
-            idx = i * CHAR_NUM + char2pos('')
+            idx = i * char_num + char2pos('')
         vector[idx] = 1        
     return vector
 
 def vec2text(vec):
+    char_len,char_num = get_char_length_and_number()
     char_pos = vec.nonzero()[0]
     text = []
     for i, c in enumerate(char_pos):
         char_at_pos = i  # c/63
-        char_idx = c % CHAR_NUM
+        char_idx = c % char_num
         char_code = pos2char(char_idx)
         text.append(char_code)
     return "".join(text)
 
 def pred2text(pred):
+    char_len,char_num = get_char_length_and_number()
     pred = np.array(pred)
-    pred = np.reshape(pred,[-1,CHAR_NUM])
+    pred = np.reshape(pred,[-1,char_num])
     length = pred.shape[0]
     text = []
     for i in range(length):
@@ -119,9 +123,9 @@ def rgb2gray(rgb):
     return gray
 
 def accuracy(y_true, y_pred):
-    char_len = get_char_length()
-    y_true = K.reshape(y_true,[-1,char_len,CHAR_NUM])
-    y_pred = K.reshape(y_pred,[-1,char_len,CHAR_NUM])
+    [char_len,char_num] = get_char_length_and_number()    
+    y_true = K.reshape(y_true,[-1,char_len,char_num])
+    y_pred = K.reshape(y_pred,[-1,char_len,char_num])
 
     class_true = K.argmax(y_true,axis=2)
     class_pred = K.argmax(y_pred,axis=2)
@@ -135,9 +139,9 @@ def accuracy(y_true, y_pred):
     return accuracy
 
 def cal_accuracy(y_true, y_pred):
-    char_len = get_char_length()
-    y_true = np.reshape(y_true,[-1,char_len,CHAR_NUM])
-    y_pred = np.reshape(y_pred,[-1,char_len,CHAR_NUM])
+    [char_len,char_num] = get_char_length_and_number() 
+    y_true = np.reshape(y_true,[-1,char_len,char_num])
+    y_pred = np.reshape(y_pred,[-1,char_len,char_num])
 
     class_true = np.argmax(y_true,axis=2)
     class_pred = np.argmax(y_pred,axis=2)

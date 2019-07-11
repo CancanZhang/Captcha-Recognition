@@ -45,12 +45,12 @@ def draw_hist(hists):
     plt.show();
 
 img_gen = Generate_Data(train_num = 128*4)
-length = get_char_length()
+[char_len,char_num] = get_char_length_and_number()  
 
 input_shape = (IMAGE_HEIGHT,IMAGE_WIDTH,CHANNEL)
-model = MobileNet(input_shape=input_shape,alpha=1.,weights=None,classes=CHAR_NUM*length)
+model = MobileNet(input_shape=input_shape,alpha=1.,weights=None,classes=char_num*char_len)
 
-#parallel_model = multi_gpu_model(model, 4)
+#parallel_model = multi_gpu_model(model, 2)
 adam = keras.optimizers.Adam(lr = 0.005, beta_1=0.9, beta_2=0.999,decay=0.01)
 model.compile(loss='categorical_crossentropy', optimizer=adam, metrics=[accuracy,categorical_accuracy,categorical_crossentropy])
 cbk = MyCbk(model)
