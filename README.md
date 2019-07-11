@@ -1,13 +1,9 @@
 # Captcha-Recognition
 
-- Recognize captcha with fixed length (4 chars) or variable length (4-8 chars)
+- Recognize captcha variable length (4-6 chars)
 
   ![2](https://github.com/CancanZhang/Captcha-Recognition/blob/master/MobileNet/img/2.png)
   ![1](https://github.com/CancanZhang/Captcha-Recognition/blob/master/MobileNet/img/1.png)
-  
-   \
-  ![2](https://github.com/CancanZhang/Captcha-Recognition/blob/master/MobileNet_with_Variable_Char_Length/img/2.png)
-  ![1](https://github.com/CancanZhang/Captcha-Recognition/blob/master/MobileNet_with_Variable_Char_Length/img/1.png)
   ![3](https://github.com/CancanZhang/Captcha-Recognition/blob/master/MobileNet_with_Variable_Char_Length/img/3.png)
   ![4](https://github.com/CancanZhang/Captcha-Recognition/blob/master/MobileNet_with_Variable_Char_Length/img/4.png)
 
