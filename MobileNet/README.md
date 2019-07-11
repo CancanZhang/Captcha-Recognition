@@ -7,7 +7,7 @@ Environment: Python 2.7.6 Tensorflow 1.4.1 Keras 2.1.5 Tesla K80*2
 - Light weight deep neural networks
 
 - Factorize a standard convolution into a depthwise convolution and a 1X1 convolution 
-![mobilenet](https://github.com/CancanZhang/Captcha-Recognition/blob/master/MobileNet/img/mobilenet.jepg)
+![mobilenet](https://github.com/CancanZhang/Captcha-Recognition/blob/master/MobileNet/img/mobilenet.jpeg)
 
 - Input Size: $D_F * D_F * M$
 
