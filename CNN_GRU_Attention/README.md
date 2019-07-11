@@ -1,6 +1,6 @@
 # Captcha Recognition with CNN+GRU+Attention	 
 
-Environment: Python 2.7.6 Tensorflow 1.4.1 Keras 2.1.5 Tesla K80*1
+Environment: Python 2.7.6 Tensorflow 1.4.1 Keras 2.1.5 Tesla K80*2
 
 ### CNN+GRU+Attention
 
